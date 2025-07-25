@@ -36,8 +36,59 @@ A backend API to manage job applications, built with **NestJS**, **TypeScript**,
 ```bash
 git clone https://github.com/your-username/job-tracker-api.git
 cd job-tracker-api/backend 
+```
 
 ### 2. Install Dependencies
 ```bash
-
 npm install
+```
+### 3. Set Environment Variables
+Create a .env file in the backend/ directory:
+```env
+DATABASE_URL="postgresql://david:secret123@localhost:5432/jobtracker"
+JWT_SECRET="your_jwt_secret"
+JWT_REFRESH_SECRET="your_refresh_token_secret"
+```
+
+### 4. Run PostgreSQL with Docker
+```bash
+docker-compose up -d
+```
+
+### 5. Generate and Push Prisma Schema
+```bash
+npx prisma db push
+npx prisma generate
+```
+
+### 6. Start the Development Server
+```bash
+npm run start:dev
+```
+
+### 📁 Project Structure
+```pgsql
+backend/
+├── src/
+│   ├── auth/        # Authentication module
+│   ├── jobs/        # Job tracking module
+│   ├── user/        # User module
+│   ├── common/      # Shared utilities (guards, DTOs, interceptors)
+│   ├── prisma/      # PrismaService wrapper
+│   └── main.ts      # App entry point
+├── prisma/
+│   └── schema.prisma
+├── docker-compose.yml
+├── .env
+└── README.md
+```
+
+### 🐳 Docker Quick Commands
+```bash
+docker-compose up -d     # Start PostgreSQL container
+docker-compose down      # Stop container and remove volumes
+```
+
+### 📌 License
+This project is licensed under the MIT License.
+
