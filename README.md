@@ -34,7 +34,7 @@ A backend API to manage job applications, built with **NestJS**, **TypeScript**,
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/job-tracker-api.git
+git clone https://github.com/dlee555/job-tracker-api.git
 cd job-tracker-api/backend 
 ```
 
@@ -45,7 +45,7 @@ npm install
 ### 3. Set Environment Variables
 Create a .env file in the backend/ directory:
 ```env
-DATABASE_URL="postgresql://david:secret123@localhost:5432/jobtracker"
+DATABASE_URL="postgresql://{YOUR_WHATEVER_NAME}@localhost:{PORT}/jobtracker"
 JWT_SECRET="your_jwt_secret"
 JWT_REFRESH_SECRET="your_refresh_token_secret"
 ```
