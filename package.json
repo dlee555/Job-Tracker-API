@@ -1,0 +1,27 @@
+{
+  "name": "job-tracker-api",
+  "version": "1.0.0",
+  "description": "A backend API to manage job applications, built with **NestJS**, **TypeScript**, **PostgreSQL**, and **Prisma**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlee555/Job-Tracker-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlee555/Job-Tracker-API/issues"
+  },
+  "homepage": "https://github.com/dlee555/Job-Tracker-API#readme",
+  "dependencies": {
+    "@nestjs/common": "^11.1.5",
+    "@nestjs/core": "^11.1.5",
+    "@nestjs/platform-express": "^11.1.5",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  }
+}
