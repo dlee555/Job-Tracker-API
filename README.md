@@ -1,4 +1,4 @@
-# 📋 Job Tracker API
+# 📋 Job Tracker API (WIP)
 
 A backend API to manage job applications, built with **NestJS**, **TypeScript**, **PostgreSQL**, and **Prisma**.
 
