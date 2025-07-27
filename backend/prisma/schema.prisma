@@ -14,9 +14,10 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
+  id        Int   @id @default(autoincrement())
   email     String   @unique
-  password  String
+  hash      String
+  hashedRt  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   jobs      Job[]
@@ -29,7 +30,7 @@ model Job {
   status      String   @default("applied")
   appliedAt   DateTime @default(now())
   user        User     @relation(fields: [userId], references: [id])
-  userId      String
+  userId      Int
   updatedAt   DateTime @updatedAt
 }
 
